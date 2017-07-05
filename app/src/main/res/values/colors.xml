@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- AppTheme -->
+	<color name="colorPrimary">@color/color_blue_grey_8</color>
+	<color name="colorPrimaryDark">@color/color_blue_grey_10</color>
+	<color name="colorPrimaryLight">@color/color_blue_grey_1</color>
+	<color name="colorAccent">@color/color_blue_grey_8</color>
+
+	<!-- BlueGrey -->
+	<color name="color_blue_grey_1">#ECEFF1</color>
+	<color name="color_blue_grey_2">#CFD8DC</color>
+	<color name="color_blue_grey_3">#B0BEC5</color>
+	<color name="color_blue_grey_4">#90A4AE</color>
+	<color name="color_blue_grey_5">#78909C</color>
+	<color name="color_blue_grey_6">#607D8B</color>
+	<color name="color_blue_grey_7">#546E7A</color>
+	<color name="color_blue_grey_8">#455A64</color>
+	<color name="color_blue_grey_9">#37474F</color>
+	<color name="color_blue_grey_10">#263238</color>
+
+	<!-- Grey -->
+	<color name="color_grey_1">#FAFAFA</color>
+	<color name="color_grey_2">#F5F5F5</color>
+	<color name="color_grey_3">#EEEEEE</color>
+	<color name="color_grey_4">#E0E0E0</color>
+	<color name="color_grey_5">#BDBDBD</color>
+	<color name="color_grey_6">#9E9E9E</color>
+	<color name="color_grey_7">#757575</color>
+	<color name="color_grey_8">#616161</color>
+	<color name="color_grey_9">#424242</color>
+	<color name="color_grey_10">#212121</color>
+
+	<!-- Other -->
+	<color name="black">#000000</color>
+	<color name="white">#FFFFFF</color>
+
+</resources>

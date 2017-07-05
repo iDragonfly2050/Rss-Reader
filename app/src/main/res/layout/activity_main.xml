@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/activity_main_linearlayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:transitionGroup="true"
+		tools:context="com.example.sky.rssreader.activity.MainActivity">
+
+	<android.support.v7.widget.Toolbar android:layout_width="match_parent"
+									   android:layout_height="@dimen/app_bar_height"
+									   android:background="@color/colorPrimary"
+									   android:elevation="@dimen/elevation_low">
+
+		<TextView android:id="@+id/activity_main_textview"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:textColor="@color/color_blue_grey_1"
+				  android:textSize="@dimen/text_size_level_5"
+				  android:layout_gravity="center"
+				  tools:text="@string/title_home"/>
+
+	</android.support.v7.widget.Toolbar>
+
+	<FrameLayout android:id="@+id/activity_main_framelayout"
+				 android:layout_width="match_parent"
+				 android:layout_height="0dp"
+				 android:layout_weight="1"/>
+
+
+	<android.support.design.widget.BottomNavigationView android:id="@+id/activity_main_bottomnavigationview"
+														android:layout_width="match_parent"
+														android:layout_height="@dimen/navigation_bar_height"
+														android:background="@color/colorPrimaryLight"
+														android:layout_gravity="bottom"
+														android:elevation="@dimen/elevation_low"
+														app:menu="@menu/navigation"/>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="vertical"
+			  android:transitionGroup="true">
+
+	<android.support.v7.widget.Toolbar android:layout_width="match_parent"
+									   android:layout_height="@dimen/app_bar_height"
+									   android:background="@color/colorPrimary"
+									   app:contentInsetStart="0dp"
+									   android:elevation="@dimen/elevation_low">
+
+		<ImageButton android:id="@+id/activity_news_back"
+					 android:layout_width="@dimen/app_bar_height"
+					 android:layout_height="@dimen/app_bar_height"
+					 android:src="@drawable/ic_arrow_back_blue_grey_100_24dp"
+					 android:background="?attr/selectableItemBackground"
+					 android:layout_gravity="start"/>
+
+		<TextView android:id="@+id/activity_news_title"
+				  android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:textColor="@color/color_blue_grey_1"
+				  android:textSize="@dimen/text_size_level_5"
+				  android:layout_gravity="center"
+				  tools:text="36氪"/>
+
+		<ImageButton android:id="@+id/activity_news_star"
+					 android:layout_width="@dimen/app_bar_height"
+					 android:layout_height="@dimen/app_bar_height"
+					 android:src="@drawable/selector_star"
+					 android:background="?attr/selectableItemBackground"
+					 android:layout_gravity="end"/>
+
+	</android.support.v7.widget.Toolbar>
+
+	<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+												android:layout_height="match_parent"
+												android:background="@color/color_blue_grey_1"
+												android:scrollbars="vertical">
+
+		<WebView
+				android:id="@+id/activity_news_webview"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"/>
+
+	</android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

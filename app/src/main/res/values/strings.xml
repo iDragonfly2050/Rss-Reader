@@ -1,0 +1,26 @@
+<resources>
+	<!-- AppName -->
+	<string name="app_name">Rss阅读器</string>
+
+	<!-- BottomNavigationView -->
+	<string name="navigation_home">首页</string>
+	<string name="navigation_rss">订阅</string>
+	<string name="navigation_profile">我</string>
+
+	<!-- Title -->
+	<string name="title_home">Rss 阅读器</string>
+	<string name="title_rss">订阅中心</string>
+	<string name="title_profile">我的</string>
+
+	<!-- Settings -->
+	<string name="settings_default_title_font_name">Lantinghei SC</string>
+	<string name="settings_default_font_name">STKaiti</string>
+
+	<!-- RSSSource -->
+	<string name="rss_source_1_url">http://36kr.com/feed</string>
+	<string name="rss_source_1_name">36氪</string>
+	<string name="rss_source_2_url">https://sspai.com/feed</string>
+	<string name="rss_source_2_name">少数派</string>
+	<string name="rss_source_3_url">http://www.geekpark.net/rss</string>
+	<string name="rss_source_3_name">极客公园</string>
+</resources>
