@@ -1,4 +1,4 @@
-package com.example.sky.rssreader.recyclerView.adapter;
+package com.example.sky.rss_reader.recyclerView.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
-import com.example.sky.rssreader.R;
-import com.example.sky.rssreader.model.news.NewsItem;
-import com.example.sky.rssreader.model.news.NewsList;
+import com.example.sky.rss_reader.R;
+import com.example.sky.rss_reader.model.news.NewsItem;
+import com.example.sky.rss_reader.model.news.NewsList;
 
 public class NewsListAdapter extends RecyclerView.Adapter<Holder> {
 	private Context mContext;

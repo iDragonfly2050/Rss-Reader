@@ -1,4 +1,4 @@
-package com.example.sky.rssreader.activity;
+package com.example.sky.rss_reader.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,11 +11,11 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import com.example.sky.rssreader.R;
-import com.example.sky.rssreader.activity.base.BaseActivity;
-import com.example.sky.rssreader.model.manager.AppManager;
-import com.example.sky.rssreader.model.news.NewsItem;
-import com.example.sky.rssreader.model.news.Style;
+import com.example.sky.rss_reader.R;
+import com.example.sky.rss_reader.activity.base.BaseActivity;
+import com.example.sky.rss_reader.model.manager.AppManager;
+import com.example.sky.rss_reader.model.news.NewsItem;
+import com.example.sky.rss_reader.model.news.Style;
 
 public class NewsActivity extends BaseActivity {
 	private static String NEWS_ITEM = "NEWS_ITEM";

@@ -1,4 +1,4 @@
-package com.example.sky.rssreader.recyclerView.itemDecoration;
+package com.example.sky.rss_reader.recyclerView.itemDecoration;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -6,13 +6,13 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import com.example.sky.rssreader.R;
+import com.example.sky.rss_reader.R;
 
 public class NewsListItemDecoration extends RecyclerView.ItemDecoration {
 	private Drawable mDivider;
 
 	public NewsListItemDecoration(Context context) {
-		mDivider = context.getResources().getDrawable(R.drawable.shape_newslist_itemdecoration, null);
+		mDivider = context.getResources().getDrawable(R.drawable.shape_divider_horizontal, null);
 	}
 
 	@Override

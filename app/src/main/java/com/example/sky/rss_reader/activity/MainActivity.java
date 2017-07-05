@@ -1,4 +1,4 @@
-package com.example.sky.rssreader.activity;
+package com.example.sky.rss_reader.activity;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,11 +8,11 @@ import android.support.v4.app.FragmentTransaction;
 import android.transition.TransitionInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
-import com.example.sky.rssreader.R;
-import com.example.sky.rssreader.activity.base.BaseActivity;
-import com.example.sky.rssreader.fragment.main.HomeFragment;
-import com.example.sky.rssreader.fragment.main.ProfileFragment;
-import com.example.sky.rssreader.fragment.main.RssFragment;
+import com.example.sky.rss_reader.R;
+import com.example.sky.rss_reader.activity.base.BaseActivity;
+import com.example.sky.rss_reader.fragment.main.HomeFragment;
+import com.example.sky.rss_reader.fragment.main.ProfileFragment;
+import com.example.sky.rss_reader.fragment.main.RssFragment;
 
 public class MainActivity extends BaseActivity {
 	private TextView mTextView;

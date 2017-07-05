@@ -1,6 +1,6 @@
-package com.example.sky.rssreader.model.rss;
+package com.example.sky.rss_reader.model.rss;
 
-import com.example.sky.rssreader.model.news.NewsItem;
+import com.example.sky.rss_reader.model.news.NewsItem;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

@@ -1,7 +1,7 @@
-package com.example.sky.rssreader.model.manager;
+package com.example.sky.rss_reader.model.manager;
 
 import android.content.res.AssetManager;
-import com.example.sky.rssreader.application.MyApplication;
+import com.example.sky.rss_reader.application.MyApplication;
 
 import java.io.IOException;
 import java.util.ArrayList;

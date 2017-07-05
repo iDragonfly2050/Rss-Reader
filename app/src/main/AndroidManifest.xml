@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-		  package="com.example.sky.rssreader">
+		  xmlns:tools="http://schemas.android.com/tools"
+		  package="com.example.sky.rss_reader">
 
 	<uses-permission android:name="android.permission.INTERNET"/>
 
@@ -12,7 +13,8 @@
 			android:roundIcon="@mipmap/ic_launcher_round"
 			android:supportsRtl="true"
 			android:windowActivityTransitions="true"
-			android:theme="@style/AppTheme">
+			android:theme="@style/AppTheme"
+			tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
 		<activity
 				android:name=".activity.MainActivity"

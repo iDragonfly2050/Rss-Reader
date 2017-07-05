@@ -1,8 +1,8 @@
-package com.example.sky.rssreader.recyclerView.diffutils;
+package com.example.sky.rss_reader.recyclerView.diffutils;
 
 import android.support.annotation.Nullable;
 import android.support.v7.util.DiffUtil;
-import com.example.sky.rssreader.model.news.NewsItem;
+import com.example.sky.rss_reader.model.news.NewsItem;
 
 import java.util.ArrayList;
 

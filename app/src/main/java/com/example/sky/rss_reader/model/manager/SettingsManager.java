@@ -1,11 +1,11 @@
-package com.example.sky.rssreader.model.manager;
+package com.example.sky.rss_reader.model.manager;
 
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.preference.PreferenceManager;
 import android.util.TypedValue;
-import com.example.sky.rssreader.R;
-import com.example.sky.rssreader.application.MyApplication;
+import com.example.sky.rss_reader.R;
+import com.example.sky.rss_reader.application.MyApplication;
 
 public class SettingsManager {
 	private String mTitleFontName;

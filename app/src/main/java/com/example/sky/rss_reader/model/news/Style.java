@@ -1,7 +1,7 @@
-package com.example.sky.rssreader.model.news;
+package com.example.sky.rss_reader.model.news;
 
-import com.example.sky.rssreader.model.manager.AppManager;
-import com.example.sky.rssreader.model.manager.FontsManager;
+import com.example.sky.rss_reader.model.manager.AppManager;
+import com.example.sky.rss_reader.model.manager.FontsManager;
 
 public class Style {
 	public static String generateStyle() {

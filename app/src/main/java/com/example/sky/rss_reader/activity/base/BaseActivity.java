@@ -1,4 +1,4 @@
-package com.example.sky.rssreader.activity.base;
+package com.example.sky.rss_reader.activity.base;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;

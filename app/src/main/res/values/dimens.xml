@@ -16,7 +16,7 @@
 	<item name="settings_default_line_height" type="dimen" format="float">1.75</item>
 
 	<!-- Elevation -->
-	<dimen name="elevation_low">3dp</dimen>
+	<dimen name="elevation_low">4dp</dimen>
 
 	<!-- TextSize -->
 	<dimen name="text_size_level_1">12sp</dimen>
@@ -34,12 +34,13 @@
 	<!-- Activity Transition -->
 	<integer name="transition_duration">200</integer>
 
-	<!-- Profile Item -->
-	<dimen name="profile_item_height_big">40dp</dimen>
-	<dimen name="profile_item_height">30dp</dimen>
-	<dimen name="profile_cardview_padding_vertical">20dp</dimen>
+	<!-- Profile CardView & Item -->
+	<dimen name="profile_cardview_margin_horizontal">10dp</dimen>
+	<dimen name="profile_cardview_margin_vertical">15dp</dimen>
 	<dimen name="profile_cardview_corner_radius">5dp</dimen>
 	<dimen name="profile_cardview_elevation">3dp</dimen>
 
+	<dimen name="profile_item_big_height">70dp</dimen>
+	<dimen name="profile_item_height">55dp</dimen>
 </resources>
 

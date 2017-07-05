@@ -1,4 +1,4 @@
-package com.example.sky.rssreader.utils;
+package com.example.sky.rss_reader.utils;
 
 import android.content.Context;
 import android.util.DisplayMetrics;

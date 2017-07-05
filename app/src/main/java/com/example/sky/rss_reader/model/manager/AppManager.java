@@ -1,10 +1,10 @@
-package com.example.sky.rssreader.model.manager;
+package com.example.sky.rss_reader.model.manager;
 
-import com.example.sky.rssreader.model.news.NewsItem;
-import com.example.sky.rssreader.model.rss.BaseRssSource;
-import com.example.sky.rssreader.model.rss.RssSource1;
-import com.example.sky.rssreader.model.rss.RssSource2;
-import com.example.sky.rssreader.model.rss.RssSource3;
+import com.example.sky.rss_reader.model.news.NewsItem;
+import com.example.sky.rss_reader.model.rss.BaseRssSource;
+import com.example.sky.rss_reader.model.rss.RssSource1;
+import com.example.sky.rss_reader.model.rss.RssSource2;
+import com.example.sky.rss_reader.model.rss.RssSource3;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.sky.rssreader.model.news;
+package com.example.sky.rss_reader.model.news;
 
 import java.io.Serializable;
 import java.util.ArrayList;

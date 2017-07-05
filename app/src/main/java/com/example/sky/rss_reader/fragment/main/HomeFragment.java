@@ -1,4 +1,4 @@
-package com.example.sky.rssreader.fragment.main;
+package com.example.sky.rss_reader.fragment.main;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,11 +10,11 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.sky.rssreader.R;
-import com.example.sky.rssreader.fragment.NewsListFragment;
-import com.example.sky.rssreader.fragment.base.BaseFragment;
-import com.example.sky.rssreader.model.manager.AppManager;
-import com.example.sky.rssreader.model.rss.BaseRssSource;
+import com.example.sky.rss_reader.R;
+import com.example.sky.rss_reader.fragment.NewsListFragment;
+import com.example.sky.rss_reader.fragment.base.BaseFragment;
+import com.example.sky.rss_reader.model.manager.AppManager;
+import com.example.sky.rss_reader.model.rss.BaseRssSource;
 
 import java.util.ArrayList;
 

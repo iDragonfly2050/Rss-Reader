@@ -1,9 +1,9 @@
-package com.example.sky.rssreader.model.rss;
+package com.example.sky.rss_reader.model.rss;
 
 import android.content.res.Resources;
-import com.example.sky.rssreader.R;
-import com.example.sky.rssreader.application.MyApplication;
-import com.example.sky.rssreader.model.news.NewsItem;
+import com.example.sky.rss_reader.R;
+import com.example.sky.rss_reader.application.MyApplication;
+import com.example.sky.rss_reader.model.news.NewsItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;

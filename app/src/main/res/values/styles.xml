@@ -9,4 +9,11 @@
 
 		<item name="tabIndicatorColor">@color/color_blue_grey_8</item>
 	</style>
+
+	<style name="AppTheme.CardView">
+		<item name="android:layout_marginStart">@dimen/profile_cardview_margin_horizontal</item>
+		<item name="android:layout_marginEnd">@dimen/profile_cardview_margin_horizontal</item>
+		<item name="android:elevation">@dimen/profile_cardview_elevation</item>
+	</style>
+
 </resources>
