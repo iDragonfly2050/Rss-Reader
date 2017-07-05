@@ -67,13 +67,11 @@ public class NewsListFragment extends BaseFragment {
 							diffResult.dispatchUpdatesTo(mNewsListRecyclerView.getAdapter());
 							mNewsListRecyclerView.getAdapter().notifyDataSetChanged();
 							mSwipeRefreshLayout.setRefreshing(false);
-							Snackbar snackbar;
 							if (count == 0) {
-								snackbar = Snackbar.make(mCoordinatorLayout, "没有更多信息", Snackbar.LENGTH_SHORT);
+								Snackbar.make(mCoordinatorLayout, "没有更多信息", Snackbar.LENGTH_SHORT).show();
 							} else {
-								snackbar = Snackbar.make(mCoordinatorLayout, "新增 " + String.valueOf(count) + " 条信息", Snackbar.LENGTH_SHORT);
+								Snackbar.make(mCoordinatorLayout, "新增 " + String.valueOf(count) + " 条信息", Snackbar.LENGTH_SHORT).show();
 							}
-							snackbar.show();
 						}
 					});
 		}
@@ -101,7 +99,7 @@ public class NewsListFragment extends BaseFragment {
 
 		mNewsListRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 		mNewsListRecyclerView.addItemDecoration(new NewsListItemDecoration(getActivity()));
-		NewsListAdapter adapter = new NewsListAdapter(getActivity(), mNewsList);
+		NewsListAdapter adapter = new NewsListAdapter(getActivity(), mNewsList, true);
 		adapter.setOnItemClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

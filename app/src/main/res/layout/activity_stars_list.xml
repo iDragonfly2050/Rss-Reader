@@ -13,7 +13,7 @@
 									   app:contentInsetStart="0dp"
 									   android:elevation="@dimen/elevation_low">
 
-		<ImageButton android:id="@+id/activity_news_back"
+		<ImageButton android:id="@+id/activity_stars_list_back"
 					 android:layout_width="@dimen/app_bar_height"
 					 android:layout_height="@dimen/app_bar_height"
 					 android:src="@drawable/ic_arrow_back_blue_grey_100_24dp"
@@ -21,7 +21,7 @@
 					 android:layout_gravity="start"
 					 tools:ignore="ContentDescription"/>
 
-		<TextView android:id="@+id/activity_news_title"
+		<TextView android:id="@+id/activity_stars_list_title"
 				  android:layout_width="wrap_content"
 				  android:layout_height="wrap_content"
 				  android:textColor="@color/color_blue_grey_1"
@@ -29,26 +29,28 @@
 				  android:layout_gravity="center"
 				  tools:text="36氪"/>
 
-		<ImageButton android:id="@+id/activity_news_star"
-					 android:layout_width="@dimen/app_bar_height"
-					 android:layout_height="@dimen/app_bar_height"
-					 android:src="@drawable/selector_star"
-					 android:background="?attr/selectableItemBackground"
-					 android:layout_gravity="end"
-					 tools:ignore="ContentDescription"/>
-
 	</android.support.v7.widget.Toolbar>
 
-	<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
-												android:layout_height="match_parent"
-												android:background="@color/color_blue_grey_1"
-												android:scrollbars="vertical">
+	<FrameLayout android:layout_width="match_parent"
+				 android:layout_height="match_parent">
 
-		<WebView
-				android:id="@+id/activity_news_webview"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"/>
+		<TextView
+				android:id="@+id/activity_stars_list_show_zero"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="没有任何收藏"
+				android:textColor="@color/black"
+				android:textSize="@dimen/text_size_level_6"
+				android:gravity="center"
+				android:layout_gravity="center"
+				tools:ignore="HardcodedText"/>
 
-	</android.support.v4.widget.NestedScrollView>
+
+		<android.support.v7.widget.RecyclerView android:id="@+id/activity_stars_list_recyclerview"
+												android:layout_width="match_parent"
+												android:layout_height="match_parent"/>
+
+	</FrameLayout>
+
 
 </LinearLayout>

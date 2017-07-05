@@ -1,6 +1,7 @@
 package com.example.sky.rss_reader.model.manager;
 
 import com.example.sky.rss_reader.model.news.NewsItem;
+import com.example.sky.rss_reader.model.news.NewsList;
 import com.example.sky.rss_reader.model.rss.BaseRssSource;
 import com.example.sky.rss_reader.model.rss.RssSource1;
 import com.example.sky.rss_reader.model.rss.RssSource2;
@@ -14,6 +15,8 @@ public class AppManager {
 	private ArrayList<BaseRssSource> mRssFollowList = new ArrayList<>();
 	private SettingsManager mSettingsManager;
 	private NewsItem mCurrentNewsItem;
+	private NewsList mStarsList;
+	private NewsList mHistory;
 
 	public static synchronized AppManager getInstance() {
 		if (instance == null) {
@@ -21,12 +24,22 @@ public class AppManager {
 		}
 		return instance;
 	}
-
 	private AppManager() {
 		mSettingsManager = new SettingsManager();
 		mRssFollowList.add(new RssSource1());
 		mRssFollowList.add(new RssSource2());
 		mRssFollowList.add(new RssSource3());
+
+		mStarsList = new NewsList();
+		mHistory = new NewsList();
+	}
+
+	public NewsList getStarsList() {
+		return mStarsList;
+	}
+
+	public NewsList getHistory() {
+		return mHistory;
 	}
 
 	public NewsItem getCurrentNewsItem() {

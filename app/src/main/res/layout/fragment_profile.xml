@@ -6,83 +6,194 @@
 			  android:layout_height="match_parent"
 			  android:orientation="vertical">
 
-	<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
-												android:layout_height="match_parent"
-												android:background="@color/color_blue_grey_1"
-												android:scrollbars="vertical">
+	<android.support.design.widget.CoordinatorLayout android:id="@+id/fragment_profile_coordinatorlayout"
+													 android:layout_width="match_parent"
+													 android:layout_height="match_parent">
 
-		<LinearLayout android:layout_width="match_parent"
-					  android:layout_height="wrap_content"
-					  android:orientation="vertical">
+		<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+													android:layout_height="match_parent"
+													android:background="@color/color_blue_grey_1"
+													android:scrollbars="vertical">
 
-			<android.support.v7.widget.CardView android:layout_width="match_parent"
-												android:layout_height="wrap_content"
-												android:layout_marginTop="@dimen/profile_cardview_margin_vertical"
-												card_view:cardCornerRadius="@dimen/profile_cardview_corner_radius"
-												card_view:cardBackgroundColor="@color/white"
-												style="@style/AppTheme.CardView">
+			<LinearLayout android:layout_width="match_parent"
+						  android:layout_height="wrap_content"
+						  android:orientation="vertical">
 
-				<LinearLayout android:layout_width="match_parent"
-							  android:layout_height="@dimen/profile_item_big_height"
-							  android:orientation="horizontal"
-							  android:background="@color/color_blue_grey_1">
+				<android.support.v7.widget.CardView android:layout_width="match_parent"
+													android:layout_height="wrap_content"
+													android:layout_marginTop="@dimen/profile_cardview_margin_vertical"
+													card_view:cardCornerRadius="@dimen/profile_cardview_corner_radius"
+													style="@style/AppTheme.CardView">
 
-					<ImageView android:layout_width="wrap_content"
-							   android:layout_height="match_parent"
-							   android:scaleType="fitCenter"
-							   android:scaleX="0.7"
-							   android:scaleY="0.7"
-							   android:src="@drawable/ic_portrait_blue_grey_800_48dp"
-							   android:adjustViewBounds="true"
-							   tools:ignore="ContentDescription"/>
+					<LinearLayout android:id="@+id/fragment_profile_login"
+								  android:layout_width="match_parent"
+								  android:layout_height="@dimen/profile_item_big_height"
+								  android:orientation="horizontal">
+
+						<FrameLayout android:layout_width="wrap_content"
+									 android:layout_height="match_parent"
+									 android:background="@color/color_blue_grey_1">
+
+							<ImageView android:layout_width="wrap_content"
+									   android:layout_height="match_parent"
+									   android:scaleType="fitCenter"
+									   android:scaleX="0.7"
+									   android:scaleY="0.7"
+									   android:src="@drawable/ic_portrait_blue_grey_800_48dp"
+									   android:adjustViewBounds="true"
+									   tools:ignore="ContentDescription"/>
+
+						</FrameLayout>
 
 
-					<ImageView
-							android:layout_width="wrap_content"
-							android:layout_height="match_parent"
-							android:src="@drawable/shape_divider_vertical"
-							tools:ignore="ContentDescription"/>
+						<ImageView
+								android:layout_width="wrap_content"
+								android:layout_height="match_parent"
+								android:src="@drawable/shape_divider_vertical"
+								tools:ignore="ContentDescription"/>
 
-					<TextView
-							android:layout_width="match_parent"
-							android:layout_height="match_parent"
-							android:background="@color/white"
-							android:text="登录"
-							android:textColor="@color/black"
-							android:textSize="@dimen/text_size_level_6"
-							android:gravity="center"
-							android:paddingEnd="39dp"
-							tools:ignore="HardcodedText,RtlSymmetry"/>
-				</LinearLayout>
+						<TextView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:text="登录"
+								android:textColor="@color/black"
+								android:textSize="@dimen/text_size_level_6"
+								android:gravity="center"
+								android:paddingEnd="39dp"
+								tools:ignore="HardcodedText,RtlSymmetry"/>
+					</LinearLayout>
 
-			</android.support.v7.widget.CardView>
+				</android.support.v7.widget.CardView>
 
-			<android.support.v7.widget.CardView android:layout_width="match_parent"
-												android:layout_height="wrap_content"
-												android:layout_marginTop="@dimen/profile_cardview_margin_vertical"
-												card_view:cardCornerRadius="@dimen/profile_cardview_corner_radius"
-												card_view:cardBackgroundColor="@color/white"
-												style="@style/AppTheme.CardView">
-
-				<LinearLayout android:layout_width="match_parent"
-							  android:layout_height="wrap_content"
-							  android:orientation="vertical"
-							  android:showDividers="middle"
-							  android:divider="@drawable/shape_divider_horizontal">
+				<android.support.v7.widget.CardView android:layout_width="match_parent"
+													android:layout_height="wrap_content"
+													android:layout_marginTop="@dimen/profile_cardview_margin_vertical"
+													card_view:cardCornerRadius="@dimen/profile_cardview_corner_radius"
+													card_view:cardBackgroundColor="@color/white"
+													style="@style/AppTheme.CardView">
 
 					<LinearLayout android:layout_width="match_parent"
-								  android:layout_height="@dimen/profile_item_height"
-								  android:orientation="horizontal"
-								  android:background="@color/color_blue_grey_1">
+								  android:layout_height="wrap_content"
+								  android:orientation="vertical"
+								  android:showDividers="middle"
+								  android:divider="@drawable/shape_divider_horizontal">
 
-						<ImageView android:layout_width="wrap_content"
-								   android:layout_height="match_parent"
-								   android:scaleType="fitCenter"
-								   android:scaleX="0.5"
-								   android:scaleY="0.5"
-								   android:src="@drawable/ic_star_blue_grey_800_24dp"
-								   android:adjustViewBounds="true"
-								   tools:ignore="ContentDescription"/>
+						<LinearLayout android:id="@+id/fragment_profile_stars_list"
+									  android:layout_width="match_parent"
+									  android:layout_height="@dimen/profile_item_height"
+									  android:orientation="horizontal">
+
+							<FrameLayout android:layout_width="wrap_content"
+										 android:layout_height="match_parent"
+										 android:background="@color/color_blue_grey_1">
+
+								<ImageView android:layout_width="wrap_content"
+										   android:layout_height="match_parent"
+										   android:scaleType="fitCenter"
+										   android:scaleX="0.5"
+										   android:scaleY="0.5"
+										   android:src="@drawable/ic_star_blue_grey_800_24dp"
+										   android:adjustViewBounds="true"
+										   tools:ignore="ContentDescription"/>
+
+							</FrameLayout>
+
+							<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/shape_divider_vertical"
+									tools:ignore="ContentDescription"/>
+
+							<TextView
+									android:layout_width="0dp"
+									android:layout_height="match_parent"
+									android:text="我的收藏"
+									android:textColor="@color/black"
+									android:textSize="@dimen/text_size_level_4"
+									android:gravity="center"
+									android:layout_weight="1"
+									tools:ignore="HardcodedText"/>
+
+							<ImageView android:layout_width="wrap_content"
+									   android:layout_height="match_parent"
+									   android:src="@drawable/ic_keyboard_arrow_right_blue_grey_800_24dp"
+									   tools:ignore="ContentDescription"/>
+
+						</LinearLayout>
+
+						<LinearLayout android:id="@+id/fragment_profile_history"
+									  android:layout_width="match_parent"
+									  android:layout_height="@dimen/profile_item_height"
+									  android:orientation="horizontal">
+
+							<FrameLayout android:layout_width="wrap_content"
+										 android:layout_height="match_parent"
+										 android:background="@color/color_blue_grey_1">
+
+								<ImageView android:layout_width="wrap_content"
+										   android:layout_height="match_parent"
+										   android:scaleType="fitCenter"
+										   android:scaleX="0.5"
+										   android:scaleY="0.5"
+										   android:src="@drawable/ic_access_time_blue_grey_800_24dp"
+										   android:adjustViewBounds="true"
+										   tools:ignore="ContentDescription"/>
+							</FrameLayout>
+
+							<ImageView
+									android:layout_width="wrap_content"
+									android:layout_height="match_parent"
+									android:src="@drawable/shape_divider_vertical"
+									tools:ignore="ContentDescription"/>
+
+							<TextView
+									android:id="@+id/textView"
+									android:layout_width="0dp"
+									android:layout_height="match_parent"
+									android:text="浏览历史"
+									android:textColor="@color/black"
+									android:textSize="@dimen/text_size_level_4"
+									android:gravity="center"
+									android:layout_weight="1"
+									tools:ignore="HardcodedText"/>
+
+							<ImageView android:layout_width="wrap_content"
+									   android:layout_height="match_parent"
+									   android:src="@drawable/ic_keyboard_arrow_right_blue_grey_800_24dp"
+									   tools:ignore="ContentDescription"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+				</android.support.v7.widget.CardView>
+
+				<android.support.v7.widget.CardView android:layout_width="match_parent"
+													android:layout_height="wrap_content"
+													android:layout_marginTop="@dimen/profile_cardview_margin_vertical"
+													android:layout_marginBottom="@dimen/profile_cardview_margin_vertical"
+													card_view:cardBackgroundColor="@color/white"
+													card_view:cardCornerRadius="@dimen/profile_cardview_corner_radius"
+													style="@style/AppTheme.CardView">
+
+					<LinearLayout android:id="@+id/fragment_profile_clean_history"
+								  android:layout_width="match_parent"
+								  android:layout_height="@dimen/profile_item_height"
+								  android:orientation="horizontal">
+
+						<FrameLayout android:layout_width="wrap_content"
+									 android:layout_height="match_parent"
+									 android:background="@color/color_blue_grey_1">
+
+							<ImageView android:layout_width="wrap_content"
+									   android:layout_height="match_parent"
+									   android:scaleType="fitCenter"
+									   android:scaleX="0.5"
+									   android:scaleY="0.5"
+									   android:src="@drawable/ic_delete_sweep_blue_grey_800_24dp"
+									   android:adjustViewBounds="true"
+									   tools:ignore="ContentDescription"/>
+						</FrameLayout>
 
 						<ImageView
 								android:layout_width="wrap_content"
@@ -93,8 +204,7 @@
 						<TextView
 								android:layout_width="0dp"
 								android:layout_height="match_parent"
-								android:background="@color/white"
-								android:text="我的收藏"
+								android:text="清空历史"
 								android:textColor="@color/black"
 								android:textSize="@dimen/text_size_level_4"
 								android:gravity="center"
@@ -104,105 +214,17 @@
 						<ImageView android:layout_width="wrap_content"
 								   android:layout_height="match_parent"
 								   android:src="@drawable/ic_keyboard_arrow_right_blue_grey_800_24dp"
-								   android:background="@color/white"
+								   android:visibility="invisible"
 								   tools:ignore="ContentDescription"/>
 
 					</LinearLayout>
 
-					<LinearLayout android:layout_width="match_parent"
-								  android:layout_height="@dimen/profile_item_height"
-								  android:orientation="horizontal"
-								  android:background="@color/color_blue_grey_1">
+				</android.support.v7.widget.CardView>
 
-						<ImageView android:layout_width="wrap_content"
-								   android:layout_height="match_parent"
-								   android:scaleType="fitCenter"
-								   android:scaleX="0.5"
-								   android:scaleY="0.5"
-								   android:src="@drawable/ic_access_time_blue_grey_800_24dp"
-								   android:adjustViewBounds="true"
-								   tools:ignore="ContentDescription"/>
+			</LinearLayout>
 
-						<ImageView
-								android:layout_width="wrap_content"
-								android:layout_height="match_parent"
-								android:src="@drawable/shape_divider_vertical"
-								tools:ignore="ContentDescription"/>
+		</android.support.v4.widget.NestedScrollView>
 
-						<TextView
-								android:layout_width="0dp"
-								android:layout_height="match_parent"
-								android:background="@color/white"
-								android:text="浏览历史"
-								android:textColor="@color/black"
-								android:textSize="@dimen/text_size_level_4"
-								android:gravity="center"
-								android:layout_weight="1"
-								tools:ignore="HardcodedText"/>
-
-						<ImageView android:layout_width="wrap_content"
-								   android:layout_height="match_parent"
-								   android:src="@drawable/ic_keyboard_arrow_right_blue_grey_800_24dp"
-								   android:background="@color/white"
-								   tools:ignore="ContentDescription"/>
-
-					</LinearLayout>
-
-				</LinearLayout>
-
-			</android.support.v7.widget.CardView>
-
-			<android.support.v7.widget.CardView android:layout_width="match_parent"
-												android:layout_height="wrap_content"
-												android:layout_marginTop="@dimen/profile_cardview_margin_vertical"
-												android:layout_marginBottom="@dimen/profile_cardview_margin_vertical"
-												card_view:cardBackgroundColor="@color/white"
-												card_view:cardCornerRadius="@dimen/profile_cardview_corner_radius"
-												style="@style/AppTheme.CardView">
-
-				<LinearLayout android:layout_width="match_parent"
-							  android:layout_height="@dimen/profile_item_height"
-							  android:orientation="horizontal"
-							  android:background="@color/color_blue_grey_1">
-
-					<ImageView android:layout_width="wrap_content"
-							   android:layout_height="match_parent"
-							   android:scaleType="fitCenter"
-							   android:scaleX="0.5"
-							   android:scaleY="0.5"
-							   android:src="@drawable/ic_delete_sweep_blue_grey_800_24dp"
-							   android:adjustViewBounds="true"
-							   tools:ignore="ContentDescription"/>
-
-					<ImageView
-							android:layout_width="wrap_content"
-							android:layout_height="match_parent"
-							android:src="@drawable/shape_divider_vertical"
-							tools:ignore="ContentDescription"/>
-
-					<TextView
-							android:layout_width="0dp"
-							android:layout_height="match_parent"
-							android:background="@color/white"
-							android:text="清空历史"
-							android:textColor="@color/black"
-							android:textSize="@dimen/text_size_level_4"
-							android:gravity="center"
-							android:layout_weight="1"
-							tools:ignore="HardcodedText"/>
-
-					<ImageView android:layout_width="wrap_content"
-							   android:layout_height="match_parent"
-							   android:src="@drawable/ic_keyboard_arrow_right_blue_grey_800_24dp"
-							   android:foreground="@color/white"
-							   tools:ignore="ContentDescription"/>
-
-				</LinearLayout>
-
-			</android.support.v7.widget.CardView>
-
-		</LinearLayout>
-
-	</android.support.v4.widget.NestedScrollView>
+	</android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>

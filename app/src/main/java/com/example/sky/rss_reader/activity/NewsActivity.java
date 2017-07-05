@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.transition.TransitionInflater;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -18,11 +19,12 @@ import com.example.sky.rss_reader.model.news.NewsItem;
 import com.example.sky.rss_reader.model.news.Style;
 
 public class NewsActivity extends BaseActivity {
-	private static String NEWS_ITEM = "NEWS_ITEM";
 	private WebView mWebView;
 	private TextView mTitle;
 	private ImageButton mBackButton;
 	private ImageButton mStarButton;
+	private AppManager mAppManager = AppManager.getInstance();
+	private int mResultCode = 0;
 
 	public static Intent newIntent(Context context, NewsItem newsItem) {
 		AppManager.getInstance().setCurrentNewsItem(newsItem);
@@ -40,10 +42,23 @@ public class NewsActivity extends BaseActivity {
 
 		initView();
 		loadNewItem();
+		mStarButton.setSelected(mAppManager.getStarsList().contains(mAppManager.getCurrentNewsItem()));
 		mStarButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				Intent data = new Intent();
+				data.putExtra(StarListActivity.STARS_LIST_CHANGED, true);
+				setResult(RESULT_OK, data);
+				NewsItem newsItem = mAppManager.getCurrentNewsItem();
 				mStarButton.setSelected(!mStarButton.isSelected());
+				if (mStarButton.isSelected()) {
+					newsItem.setReaded(false);
+					mAppManager.getStarsList().pushFirst(newsItem);
+					Snackbar.make(mWebView, "已收藏", Snackbar.LENGTH_SHORT).show();
+				} else {
+					mAppManager.getStarsList().remove(newsItem);
+					Snackbar.make(mWebView, "已移除", Snackbar.LENGTH_SHORT).show();
+				}
 			}
 		});
 		mBackButton.setOnClickListener(new View.OnClickListener() {

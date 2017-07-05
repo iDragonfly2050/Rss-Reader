@@ -37,35 +37,43 @@
 				   android:layout_height="@dimen/news_list_item_img_size"
 				   android:scaleType="centerCrop"
 				   android:src="@drawable/ic_person_blue_grey_800_24dp"
+				   android:background="@color/color_blue_grey_2"
 				   android:layout_marginBottom="13dp"
-				   android:layout_marginEnd="@dimen/news_list_item_img_margin"/>
+				   android:layout_marginEnd="@dimen/news_list_item_img_margin"
+				   tools:ignore="ContentDescription"/>
 
 		<ImageView android:id="@+id/widget_news_list_item_img1"
 				   android:layout_width="@dimen/news_list_item_img_size"
 				   android:layout_height="@dimen/news_list_item_img_size"
 				   android:scaleType="centerCrop"
 				   android:src="@drawable/ic_person_blue_grey_800_24dp"
+				   android:background="@color/color_blue_grey_2"
 				   android:layout_marginBottom="13dp"
-				   android:layout_marginEnd="@dimen/news_list_item_img_margin"/>
+				   android:layout_marginEnd="@dimen/news_list_item_img_margin"
+				   tools:ignore="ContentDescription"/>
 
 		<ImageView android:id="@+id/widget_news_list_item_img2"
 				   android:layout_width="@dimen/news_list_item_img_size"
 				   android:layout_height="@dimen/news_list_item_img_size"
 				   android:scaleType="centerCrop"
 				   android:src="@drawable/ic_person_blue_grey_800_24dp"
+				   android:background="@color/color_blue_grey_2"
 				   android:layout_marginBottom="13dp"
-				   android:layout_marginEnd="@dimen/news_list_item_img_margin"/>
+				   android:layout_marginEnd="@dimen/news_list_item_img_margin"
+				   tools:ignore="ContentDescription"/>
 
 	</LinearLayout>
 
 	<LinearLayout android:layout_width="match_parent"
 				  android:layout_height="wrap_content"
-				  android:orientation="horizontal">
+				  android:orientation="horizontal"
+				  tools:ignore="UseCompoundDrawables">
 
 		<ImageView android:id="@+id/widget_news_list_item_person"
 				   android:layout_width="20dp"
 				   android:layout_height="20dp"
-				   android:src="@drawable/ic_person_blue_grey_800_24dp"/>
+				   android:src="@drawable/ic_person_blue_grey_800_24dp"
+				   tools:ignore="ContentDescription"/>
 
 		<TextView android:id="@+id/widget_news_list_item_author"
 				  android:layout_width="0dp"

@@ -16,21 +16,23 @@ import com.example.sky.rss_reader.model.news.NewsList;
 public class NewsListAdapter extends RecyclerView.Adapter<Holder> {
 	private Context mContext;
 	private NewsList mNewsList;
+	private boolean mShouldSetReaded;
 	private View.OnClickListener mOnItemClickListener = new View.OnClickListener() {
 		@Override
 		public void onClick(View v) { }
 	};
 
-	public NewsListAdapter(Context context, NewsList newsList) {
+	public NewsListAdapter(Context context, NewsList newsList, boolean shouldSetReaded) {
 		mContext = context;
 		mNewsList = newsList;
+		mShouldSetReaded = shouldSetReaded;
 	}
 
 	@Override
 	public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
 		LayoutInflater layoutInflater = LayoutInflater.from(mContext);
 		View view = layoutInflater.inflate(R.layout.widget_news_list_item, parent, false);
-		return new Holder(mContext, view);
+		return new Holder(mContext, view, mShouldSetReaded);
 	}
 
 	@Override
@@ -70,12 +72,15 @@ class Holder extends RecyclerView.ViewHolder {
 	private TextView mAuthor;
 	private ImageView mPerson;
 	private ImageView[] mImageViews = new ImageView[3];
+
+	private boolean mShouldSetReaded;
 	private int mbackgroundColor;
 
-	Holder(Context context, View itemView) {
+	Holder(Context context, View itemView, boolean shouldSetReaded) {
 		super(itemView);
 		initView(itemView);
 		mContext = context;
+		mShouldSetReaded = shouldSetReaded;
 	}
 
 	void bindModel(final NewsItem newsItem) {
@@ -88,12 +93,10 @@ class Holder extends RecyclerView.ViewHolder {
 				Glide.with(mContext)
 						.load(newsItem.getImageUrls().get(i))
 						.into(mImageViews[i]);
-			}
-			else {
+			} else {
 				mImageViews[i].setVisibility(View.GONE);
 			}
 		}
-
 
 		setReaded(newsItem.isReaded());
 
@@ -105,17 +108,14 @@ class Holder extends RecyclerView.ViewHolder {
 				case MotionEvent.ACTION_DOWN:
 					itemView.setBackgroundColor(mContext.getResources().getColor(R.color.color_grey_3));
 					break;
-				case MotionEvent.ACTION_MOVE:
-					break;
 				case MotionEvent.ACTION_UP:
 					itemView.setBackgroundColor(mContext.getResources().getColor(R.color.color_grey_1));
-					newsItem.setReaded(true);
-					setReaded(true);
+					setReaded(mShouldSetReaded);
 					break;
 				case MotionEvent.ACTION_CANCEL:
 					itemView.setBackgroundColor(mContext.getResources().getColor(R.color.color_grey_1));
 					break;
-				case MotionEvent.ACTION_OUTSIDE:
+				default:
 					break;
 				}
 				return false;
